@@ -6,6 +6,8 @@ import htmlLogo from './images/html.png'
 import phpLogo from './images/php.png'
 import pythonLogo from './images/python.png'
 import javaLogo from './images/java.png'
+import gtr from './images/gtr.png'
+import smartPack from './images/smartPack.png'
 
 export const metadata: Metadata = {
   title: "HomePage",
@@ -18,7 +20,7 @@ export default function Home() {
     <div className="fixed top-0 left-0 w-full z-50 bg-black px-12 py-6 flex flex-col md:flex-row items-center justify-between">
       <div className="text-white md:mb-0">
         <h2 className="text-2xl font-bold mb-2">Ricardo Silva</h2>
-        <p className="text-white/90">Junior Software Developer </p>
+        <p className="text-white/90"> Junior Software Developer </p>
       </div>
       <div className="flex gap-4">
         <a 
@@ -144,10 +146,60 @@ export default function Home() {
         <section id="projects" className="mt-10 w-full">
           <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-black justify-center mb-2"> Projects</h1>
         <div className="h-1 w-20 bg-green-500 mx-auto"></div>
-        <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-5 mb-15">
-            Continue ...
+        <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+            Projeto GTR - Gestão de Terrenos Rústicos
         </h1>
-        
+         <p className="text-xl leading-7 text-zinc-600">
+            The project was carried out within the scope of the Projeto Informático course of 
+            the Bachelor's Degree in Computer Science at the School of Technology and Management 
+            Polytechnic University of Leiria. The project's main objective was to 
+            develop a tool for managing rural land through a web application using 
+            multiple layers of information, such as georeferencing data, land register 
+            data, photos, videos and text.
+          </p>
+          <Image 
+                  src={gtr}
+                  alt="GTR Project Logo"
+                  width={1000}
+                  className="mb-5 mt-10 border-card"
+          />
+          <h3 className="text-2xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+            <a
+              href="https://gtr2024.netlify.app/"
+              className="text-blue-600 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Test the Project Here!
+            </a>
+          </h3>
+           <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+            LEI - Smart Package Monitoring System
+        </h1>
+         <p className="text-xl leading-7 text-zinc-600">
+           Worked with Jakarta EE to build a clean and well-structured REST API, 
+           using DTOs to manage data flow between different layers of the application. 
+           Frontend was developed with Vue.js, ensuring smooth communication with the backend through 
+           REST calls and used Docker to simplify deployment and testing, 
+           keeping the environment consistent across all stages of development.
+          </p>
+          <Image 
+                  src={smartPack}
+                  alt="smartPackage Project Logo"
+                  width={1000}
+                  className="mb-5 mt-10 border-card"
+          />
+          <h3 className="text-2xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+            
+            <a
+              className="text-blue-600 hover:underline opacity-50 pointer-events-none not-available-link"
+              aria-disabled="true"
+            >
+              Test the Project Here!
+            </a>
+            <span className="not-available"> Not available - Uni Project</span>
+          </h3>
+
         </section>
     </main>
     </div>
