@@ -8,6 +8,8 @@ import pythonLogo from './images/python.png'
 import javaLogo from './images/java.png'
 import gtr from './images/gtr.png'
 import smartPack from './images/smartPack.png'
+import Header from "./components/Header";
+
 
 export const metadata: Metadata = {
   title: "HomePage",
@@ -16,29 +18,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-     <div className="relative w-full mb-12">
-    <div className="fixed top-0 left-0 w-full z-50 bg-black px-12 py-6 flex flex-col md:flex-row items-center justify-between">
-      <div className="text-white md:mb-0">
-        <h2 className="text-2xl font-bold mb-2">Ricardo Silva</h2>
-        <p className="text-white/90"> Junior Software Developer </p>
-      </div>
-      <div className="flex gap-4">
-        <a 
-          href="https://www.linkedin.com/in/ricardo-o-silva/" 
-          className="px-6 py-2 bg-transparent border-2 border-white text-white rounded-full font-medium hover:bg-white/10 transition-colors"
-        >
-          Linkedin Profile
-        </a>
-        <a 
-          href="https://github.com/ricsilva475" 
-          className="px-6 py-2 bg-transparent border-2 border-white text-white rounded-full font-medium hover:bg-white/10 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub Profile
-        </a>
-      </div>
-    </div>
+    <div className="relative w-full mb-12">
+    <Header />
     <div className="flex min-h-screen items-center justify-center bg-white font-sans bg-primary">
       <main className="pt-28 flex min-h-screen w-full max-w-3xl flex-col items-center py-32 px-5 bg-white bg-primary sm:items-start">
       <div className="flex gap-4">
@@ -173,9 +154,9 @@ export default function Home() {
               Test the Project Here!
             </a>
           </h3>
-           <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
             LEI - Smart Package Monitoring System
-        </h1>
+          </h1>
          <p className="text-xl leading-7 text-zinc-600">
            Worked with Jakarta EE to build a clean and well-structured REST API, 
            using DTOs to manage data flow between different layers of the application. 
@@ -199,6 +180,10 @@ export default function Home() {
             </a>
             <span className="not-available"> Not available for test - Uni Project</span>
           </h3>
+
+          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+            More coming soon ...
+          </h1>
 
         </section>
     </main>
