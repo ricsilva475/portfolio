@@ -195,9 +195,9 @@ export default function Home() {
               className="text-blue-600 hover:underline opacity-50 pointer-events-none not-available-link"
               aria-disabled="true"
             >
-              Test the Project Here!
+              
             </a>
-            <span className="not-available"> Not available - Uni Project</span>
+            <span className="not-available"> Not available for test - Uni Project</span>
           </h3>
 
         </section>
