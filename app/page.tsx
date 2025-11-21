@@ -161,9 +161,9 @@ export default function Home() {
             LEI - Smart Package Monitoring System
           </h1>
          <p className="text-xl leading-7 text-zinc-600">
-           Worked with Jakarta EE to build a clean and well-structured REST API, 
-           using DTOs to manage data flow between different layers of the application. 
-           Frontend was developed with Vue.js, ensuring smooth communication with the backend through 
+           In this project i worked with Jakarta EE to build a clean and well-structured REST API, 
+           using DTOs to manage data flow between different layers of the application and
+           frontend was developed with Vue.js, ensuring smooth communication with the backend through 
            REST calls and used Docker to simplify deployment and testing, 
            keeping the environment consistent across all stages of development.
           </p>
@@ -188,31 +188,36 @@ export default function Home() {
             LEI - Mobile Application and Agile Methodologies Implementation
           </h1>
         <p className="text-xl leading-7 text-zinc-600">
-          Worked with Jira and BitBucket to organize the team’s workflow and create User Stories with acceptance criteria and Business Value.
-          Used Katalon to build and run automated tests for Android mobile applications, making it easier to find issues early and keep the quality consistent.
-          These new processes helped the team work in a more structured way and improved the reliability of the final product.
+        Implemented workflow improvements using Jira and Bitbucket by creating detailed User Stories 
+        with clear acceptance criteria, business value, and easy traceability throughout the development process.
+        Developed and ran automated test suites in Katalon Studio for Android applications, 
+        using data-driven tests, modular test components, and CI triggers to detect issues 
+        early and maintain strong test coverage.
         </p>
 
         <div className="flex flex-col md:flex-row gap-6 mt-10">
           <Image 
             src={Mobile2}
             alt="smartPackage Project Logo"
-            width={300}
+            width={350}
             className="border-card"
           />
           <Image 
             src={Mobile1}
             alt="smartPackage Project Logo"
-            width={300}
+            width={350}
             className="border-card"
           />
+
+        </div>
+       {/*  <div className="flex flex-col md:flex-row gap-6 mt-10">
           <Image 
             src={Mobile3}
             alt="smartPackage Project Logo"
-            width={300}
+            width={350}
             className="border-card"
           />
-        </div>
+        </div> */}
 
           <h3 className="text-2xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
             <a
