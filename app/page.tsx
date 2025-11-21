@@ -8,6 +8,9 @@ import pythonLogo from './images/python.png'
 import javaLogo from './images/java.png'
 import gtr from './images/gtr.png'
 import smartPack from './images/smartPack.png'
+import Mobile1 from './images/app1.png'
+import Mobile2 from './images/app2.png'
+import Mobile3 from './images/app3.png'
 import Header from "./components/Header";
 
 
@@ -182,8 +185,43 @@ export default function Home() {
           </h3>
 
           <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
-            More coming soon ...
+            LEI - Mobile Application and Agile Methodologies Implementation
           </h1>
+        <p className="text-xl leading-7 text-zinc-600">
+          Worked with Jira and BitBucket to organize the team’s workflow and create User Stories with acceptance criteria and Business Value.
+          Used Katalon to build and run automated tests for Android mobile applications, making it easier to find issues early and keep the quality consistent.
+          These new processes helped the team work in a more structured way and improved the reliability of the final product.
+        </p>
+
+        <div className="flex flex-col md:flex-row gap-6 mt-10">
+          <Image 
+            src={Mobile2}
+            alt="smartPackage Project Logo"
+            width={300}
+            className="border-card"
+          />
+          <Image 
+            src={Mobile1}
+            alt="smartPackage Project Logo"
+            width={300}
+            className="border-card"
+          />
+          <Image 
+            src={Mobile3}
+            alt="smartPackage Project Logo"
+            width={300}
+            className="border-card"
+          />
+        </div>
+
+          <h3 className="text-2xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+            <a
+              className="text-blue-600 hover:underline opacity-50 pointer-events-none not-available-link"
+              aria-disabled="true"
+            >
+            </a>
+            <span className="not-available"> Not available for test - Uni Project</span>
+          </h3>
 
         </section>
     </main>
