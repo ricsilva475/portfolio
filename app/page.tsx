@@ -33,7 +33,7 @@ export default function Home() {
         />
 
         <h3 className="text-xl opacity-90">Ricardo Carreira Silva</h3>
-        <p className="opacity-70 text-sm mb-3">Based in Portugal 🇵🇹 </p>
+        <p className="opacity-70 text-sm mb-3">Based in Portugal</p>
 
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mt-4 leading-tight">
           FULLSTACK <br /> DEVELOPER
