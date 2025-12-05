@@ -10,8 +10,8 @@ import gtr from './images/gtr.png'
 import smartPack from './images/smartPack.png'
 import Mobile1 from './images/app1.png'
 import Mobile2 from './images/app2.png'
-import Mobile3 from './images/app3.png'
 import Header from "./components/Header";
+import meImage from "./images/me.png";
 
 
 export const metadata: Metadata = {
@@ -21,40 +21,33 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="relative w-full mb-12">
+    <div className="pt-28 flex min-h-screen w-full site-header flex-col items-center py-32 px-5 bg-white bg-primary sm:items-start">
     <Header />
-    <div className="flex min-h-screen items-center justify-center bg-white font-sans bg-primary">
-      <main className="pt-28 flex min-h-screen w-full max-w-3xl flex-col items-center py-32 px-5 bg-white bg-primary sm:items-start">
-      <div className="flex gap-4">
-        <a 
-          href="https://github.com/ricsilva475" 
-          className="px-6 py-2 bg-transparent border-2 border-white text-white rounded-full font-medium hover:bg-white/10 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
-      </div>
-      <section id="introduction" className="w-full mt-10">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left justify-center">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black justify-center">
-            Only the beginning . . .
-          </h1>
-          <p className="text-xl leading-7 text-zinc-600">
-            Welcome to my portfolio! I'm Ricardo Silva, a Junior Software Developer
-            dedicated to crafting innovative solutions and bringing ideas to
-            life through code. 
-            Explore my projects and get to know more about my
-            journey in the tech world &#128516;
-          </p>
-        </div>
-        </section>
+      {/* HERO SECTION */}
+      <section className="flex flex-col items-center text-center pt-32 px-5">
+        <Image
+          src={meImage}
+          alt="Profile Image"
+          width={120}
+          className="rounded-full border-4 border-white shadow-xl mb-6"
+        />
+
+        <h3 className="text-xl opacity-90">Ricardo Carreira Silva</h3>
+        <p className="opacity-70 text-sm mb-3">Based in Portugal 🇵🇹 </p>
+
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mt-4 leading-tight">
+          FULLSTACK <br /> DEVELOPER
+        </h1>
+
+      </section>
+      <div className="text-center md:text-left max-w-3xl">
         <section id="hardskills" className="mt-10 w-full">
-          <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-black justify-center mb-10">
+          <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-white justify-center mb-10">
             Hard Skills
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-3xl">
           <div className="text-center md:text-left justify-center">
-              <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-black mb-2 justify-center">
+              <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-white mb-2 justify-center">
                 Frontend
               </h1>
               <div className="h-1 w-20 bg-blue-500 mx-auto"></div>
@@ -65,7 +58,7 @@ export default function Home() {
                   alt="HTML Logo"
                   width={120}
                   height={120}
-                  className="mb-5"
+                  className="mb-5 "
                 />
                 </div>
                 <div className="card-content mt-8">
@@ -75,7 +68,7 @@ export default function Home() {
                   alt="CSS3 Logo"
                   width={80}
                   height={80}
-                  className="mb-5"
+                  className="mb-5 "
                 />
                 </div>
                 <div className="card-content mt-8">
@@ -85,12 +78,12 @@ export default function Home() {
                   alt="JavaScript Logo"
                   width={80}
                   height={80}
-                  className="mb-12"
+                  className="mb-12 "
                 />
                 </div>
             </div>   
-            <div className="text-center md:text-left">
-              <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-black mb-2 justify-center">
+            <div className="text-center md:text-left max-w-3xl">
+              <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-white mb-2 justify-center">
                 Backend
               </h1>
               <div className="h-1 w-20 bg-green-500 mx-auto"></div>
@@ -121,19 +114,20 @@ export default function Home() {
                   alt="Java Logo"
                   width={60}
                   height={80}
-                  className="mb-5"
+                  className="mb-5 "
                 />
                 </div>
             </div>
           </div>
         </section>
+        <div className="text-center md:text-left max-w-3xl">
         <section id="projects" className="mt-10 w-full">
-          <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-black justify-center mb-2"> Projects</h1>
+          <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-black justify-center mb-2 text-white"> Projects</h1>
         <div className="h-1 w-20 bg-green-500 mx-auto"></div>
-        <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+        <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15 text-white">
             Projeto GTR - Gestão de Terrenos Rústicos
         </h1>
-         <p className="text-xl leading-7 text-zinc-600">
+         <p className="text-xl leading-7 text-white">
             The project was carried out within the scope of the Projeto Informático course of 
             the Bachelor's Degree in Computer Science at the School of Technology and Management 
             Polytechnic University of Leiria. The project's main objective was to 
@@ -157,10 +151,10 @@ export default function Home() {
               Test the Project Here!
             </a>
           </h3>
-          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15 text-white">
             LEI - Smart Package Monitoring System
           </h1>
-         <p className="text-xl leading-7 text-zinc-600">
+         <p className="text-xl leading-7 text-white">
            In this project i worked with Jakarta EE to build a clean and well-structured REST API, 
            using DTOs to manage data flow between different layers of the application and
            frontend was developed with Vue.js, ensuring smooth communication with the backend through 
@@ -181,13 +175,13 @@ export default function Home() {
             >
               
             </a>
-            <span className="not-available"> Not available for test - Uni Project</span>
+            <span className="not-available text-white"> Not available for test - Uni Project</span>
           </h3>
 
-          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
+          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15 text-white">
             LEI - Mobile Application and Agile Methodologies Implementation
           </h1>
-        <p className="text-xl leading-7 text-zinc-600">
+        <p className="text-xl leading-7 text-white">
         Implemented workflow improvements using Jira and Bitbucket by creating detailed User Stories 
         with clear acceptance criteria, business value, and easy traceability throughout the development process.
         Developed and ran automated test suites in Katalon Studio for Android applications, 
@@ -225,13 +219,13 @@ export default function Home() {
               aria-disabled="true"
             >
             </a>
-            <span className="not-available"> Not available for test - Uni Project</span>
+            <span className="not-available text-white"> Not available for test - Uni Project</span>
           </h3>
 
         </section>
-    </main>
     </div>
-</div>
+    </div>
+    </div>
   );
 
 }
