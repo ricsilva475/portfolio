@@ -11,7 +11,7 @@ import smartPack from './images/smartPack.png'
 import Mobile1 from './images/app1.png'
 import Mobile2 from './images/app2.png'
 import Header from "./components/Header";
-import meImage from "./images/me.jpg";
+import meImage from "./images/me2.png";
 
 
 export const metadata: Metadata = {
