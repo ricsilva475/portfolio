@@ -92,10 +92,11 @@ export default function Home() {
 
           {/* PROJECT 1 */}
           <ProjectCard
-            title="Projeto GTR - Gestão de Terrenos Rústicos"
-            description="Web application for managing rural land using GIS layers, georeferencing data, land register data, photos, videos and text."
-            image={gtr}
-            link="https://gtr2024.netlify.app/"
+          title="Projeto GTR - Gestão de Terrenos Rústicos"
+          description="Web application for managing rural land using GIS layers, georeferencing data, land register data, photos, videos and text."
+          image={gtr}
+          link="https://gtr2024.netlify.app/"
+          technologies={['ReactJs', 'Firebase', 'NoSQL', 'Google Maps']}
           />
 
           {/* PROJECT 2 */}
@@ -103,6 +104,7 @@ export default function Home() {
             title="LEI - Smart Package Monitoring System"
             description="REST API built with Jakarta EE and frontend developed with Vue.js. Docker used for consistent deployment."
             image={smartPack}
+            technologies={['Java / Jakarta EE','Vue.js', 'Docker', 'MySQL', 'Token Authentication']}
           />
 
           {/* PROJECT 3 */}
@@ -110,6 +112,7 @@ export default function Home() {
             title="LEI - Mobile Application & Agile Implementation"
             description="Agile workflow implementation using Jira and Bitbucket. Automated Android test suites developed in Katalon Studio."
             image={Mobile1}
+            technologies={['Java','Katalon Studio', 'Jira']}
           />
 
         </div>
@@ -160,6 +163,7 @@ function ProjectCard({
   image,
   link,
   secondaryImage,
+  technologies = [], // nova prop
 }: any) {
   return (
     <div className="bg-gradient-to-r from-[#1e293b] to-[#0f172a] 
@@ -181,6 +185,20 @@ function ProjectCard({
           <p className="text-gray-300 text-lg leading-relaxed line-clamp-4">
             {description}
           </p>
+
+          {/* TECHNOLOGIES BADGES */}
+          {technologies.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {technologies.map((tech: string) => (
+                <span
+                  key={tech}
+                  className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* BUTTON AREA (altura fixa) */}
@@ -234,4 +252,5 @@ function ProjectCard({
     </div>
   );
 }
+
 
