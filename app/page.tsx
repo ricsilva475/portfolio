@@ -84,7 +84,7 @@ export default function Home() {
       {/* PROJECTS */}
       <section id="projects" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold">Projects</h2>
+          <h2 className="text-4xl font-bold">Recent Projects</h2>
           <div className="h-1 w-24 bg-green-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
