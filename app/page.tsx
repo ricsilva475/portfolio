@@ -8,10 +8,10 @@ import pythonLogo from './images/python.png'
 import javaLogo from './images/java.png'
 import gtr from './images/gtr.png'
 import smartPack from './images/smartPack.png'
-import Mobile1 from './images/app1.png'
+import Mobile1 from './images/appmobile.png'
 import Mobile2 from './images/app2.png'
 import Header from "./components/Header";
-import meImage from "./images/me2.png";
+import meImage from "./images/me3.png";
 
 
 export const metadata: Metadata = {
@@ -21,211 +21,217 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="pt-28 flex min-h-screen w-full site-header flex-col items-center py-32 px-5 bg-white bg-primary sm:items-start">
-    <Header />
-      {/* HERO SECTION */}
-      <section className="flex flex-col items-center text-center pt-32 px-5">
-        <Image
-          src={meImage}
-          alt="Profile Image"
-          width={120}
-          className="rounded-full border-4 border-white shadow-xl mb-6"
-        />
+    <div className="min-h-screen w-full bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
+
+      <Header />
+
+      {/* HERO */}
+      <section className="flex flex-col items-center text-center pt-40 px-6">
+      <Image
+        src={meImage}
+        alt="Profile Image"
+        width={150}
+        height={150}
+        className="rounded-full object-cover mb-5"
+      />
 
         <h3 className="text-xl opacity-90">Ricardo Carreira Silva</h3>
-        <p className="opacity-70 text-sm mb-3">Based in Portugal</p>
+        <p className="opacity-70 text-sm mb-4">Based in Portugal</p>
 
-        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mt-4 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
           FULLSTACK <br /> DEVELOPER
         </h1>
-
       </section>
-      <div className="text-center md:text-left max-w-3xl">
-        <section id="hardskills" className="mt-10 w-full">
-          <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-white justify-center mb-10">
-            Hard Skills
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-3xl">
-          <div className="text-center md:text-left justify-center">
-              <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-white mb-2 justify-center">
-                Frontend
-              </h1>
-              <div className="h-1 w-20 bg-blue-500 mx-auto"></div>
-                <div className="card-content mt-8">
-                <h2 className="card-text">HTML</h2>
-                <Image 
-                  src={htmlLogo}
-                  alt="HTML Logo"
-                  width={120}
-                  height={120}
-                  className="mb-5 "
-                />
-                </div>
-                <div className="card-content mt-8">
-                <h2 className="card-text">CSS3</h2>
-                <Image 
-                  src={cssLogo}
-                  alt="CSS3 Logo"
-                  width={80}
-                  height={80}
-                  className="mb-5 "
-                />
-                </div>
-                <div className="card-content mt-8">
-                <h2 className="card-text">Javascript</h2>
-                <Image 
-                  src={jsLogo}
-                  alt="JavaScript Logo"
-                  width={80}
-                  height={80}
-                  className="mb-12 "
-                />
-                </div>
-            </div>   
-            <div className="text-center md:text-left max-w-3xl">
-              <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-white mb-2 justify-center">
-                Backend
-              </h1>
-              <div className="h-1 w-20 bg-green-500 mx-auto"></div>
-                <div className="card-content mt-8">
-                <h2 className="card-text">PHP 8.0</h2>
-                <Image 
-                  src={phpLogo}
-                  alt="PHPLogo"
-                  width={120}
-                  height={120}
-                  className="mb-19"
-                />
-                </div>
-                <div className="card-content mt-8">
-                <h2 className="card-text">Python</h2>
-                <Image 
-                  src={pythonLogo}
-                  alt="CSS3 Logo"
-                  width={220}
-                  height={200}
-                  className="mb-16"
-                />
-                </div>
-                <div className="card-content mt-8">
-                <h2 className="card-text">Java / Jakarta EE</h2>
-                <Image 
-                  src={javaLogo}
-                  alt="Java Logo"
-                  width={60}
-                  height={80}
-                  className="mb-5 "
-                />
-                </div>
+
+      {/* HARD SKILLS */}
+      <section id="hardskills" className="py-24 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold">Hard Skills</h2>
+          <div className="h-1 w-24 bg-blue-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+          {/* FRONTEND */}
+          <div>
+            <h3 className="text-3xl font-semibold mb-10 flex items-center gap-3">
+              💻 Frontend
+            </h3>
+
+            <div className="space-y-6">
+              <SkillCard title="HTML5" img={htmlLogo} />
+              <SkillCard title="CSS3" img={cssLogo} />
+              <SkillCard title="JavaScript" img={jsLogo} />
             </div>
           </div>
-        </section>
-        <div className="text-center md:text-left max-w-3xl">
-        <section id="projects" className="mt-10 w-full">
-          <h1 className="flex text-3xl font-semibold leading-10 tracking-tight text-black justify-center mb-2 text-white"> Projects</h1>
-        <div className="h-1 w-20 bg-green-500 mx-auto"></div>
-        <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15 text-white">
-            Projeto GTR - Gestão de Terrenos Rústicos
-        </h1>
-         <p className="text-xl leading-7 text-white">
-            The project was carried out within the scope of the Projeto Informático course of 
-            the Bachelor's Degree in Computer Science at the School of Technology and Management 
-            Polytechnic University of Leiria. The project's main objective was to 
-            develop a tool for managing rural land through a web application using 
-            multiple layers of information, such as georeferencing data, land register 
-            data, photos, videos and text.
-          </p>
-          <Image 
-                  src={gtr}
-                  alt="GTR Project Logo"
-                  width={1000}
-                  className="mb-5 mt-10 border-card"
-          />
-          <h3 className="text-2xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
-            <a
-              href="https://gtr2024.netlify.app/"
-              className="text-blue-600 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Test the Project Here!
-            </a>
-          </h3>
-          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15 text-white">
-            LEI - Smart Package Monitoring System
-          </h1>
-         <p className="text-xl leading-7 text-white">
-           In this project i worked with Jakarta EE to build a clean and well-structured REST API, 
-           using DTOs to manage data flow between different layers of the application and
-           frontend was developed with Vue.js, ensuring smooth communication with the backend through 
-           REST calls and used Docker to simplify deployment and testing, 
-           keeping the environment consistent across all stages of development.
-          </p>
-          <Image 
-                  src={smartPack}
-                  alt="smartPackage Project Logo"
-                  width={1000}
-                  className="mb-5 mt-10 border-card"
-          />
-          <h3 className="text-2xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
-            
-            <a
-              className="text-blue-600 hover:underline opacity-50 pointer-events-none not-available-link"
-              aria-disabled="true"
-            >
-              
-            </a>
-            <span className="not-available text-white"> Not available for test - Uni Project</span>
-          </h3>
 
-          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15 text-white">
-            LEI - Mobile Application and Agile Methodologies Implementation
-          </h1>
-        <p className="text-xl leading-7 text-white">
-        Implemented workflow improvements using Jira and Bitbucket by creating detailed User Stories 
-        with clear acceptance criteria, business value, and easy traceability throughout the development process.
-        Developed and ran automated test suites in Katalon Studio for Android applications, 
-        using data-driven tests, modular test components, and CI triggers to detect issues 
-        early and maintain strong test coverage.
-        </p>
+          {/* BACKEND */}
+          <div>
+            <h3 className="text-3xl font-semibold mb-10 flex items-center gap-3">
+              🖥 Backend
+            </h3>
 
-        <div className="flex flex-col md:flex-row gap-6 mt-10">
-          <Image 
-            src={Mobile2}
-            alt="smartPackage Project Logo"
-            width={350}
-            className="border-card"
+            <div className="space-y-6">
+              <SkillCard title="PHP 8.0" img={phpLogo} highlight />
+              <SkillCard title="Python" img={pythonLogo} />
+              <SkillCard title="Java / Jakarta EE" img={javaLogo} />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="py-24 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold">Projects</h2>
+          <div className="h-1 w-24 bg-green-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div className="space-y-24">
+
+          {/* PROJECT 1 */}
+          <ProjectCard
+            title="Projeto GTR - Gestão de Terrenos Rústicos"
+            description="Web application for managing rural land using GIS layers, georeferencing data, land register data, photos, videos and text."
+            image={gtr}
+            link="https://gtr2024.netlify.app/"
           />
-          <Image 
-            src={Mobile1}
-            alt="smartPackage Project Logo"
-            width={350}
-            className="border-card"
+
+          {/* PROJECT 2 */}
+          <ProjectCard
+            title="LEI - Smart Package Monitoring System"
+            description="REST API built with Jakarta EE and frontend developed with Vue.js. Docker used for consistent deployment."
+            image={smartPack}
+          />
+
+          {/* PROJECT 3 */}
+          <ProjectCard
+            title="LEI - Mobile Application & Agile Implementation"
+            description="Agile workflow implementation using Jira and Bitbucket. Automated Android test suites developed in Katalon Studio."
+            image={Mobile1}
           />
 
         </div>
-       {/*  <div className="flex flex-col md:flex-row gap-6 mt-10">
-          <Image 
-            src={Mobile3}
-            alt="smartPackage Project Logo"
-            width={350}
-            className="border-card"
-          />
-        </div> */}
-
-          <h3 className="text-2xl font-semibold leading-10 tracking-tight text-black justify-center mt-10 mb-15">
-            <a
-              className="text-blue-600 hover:underline opacity-50 pointer-events-none not-available-link"
-              aria-disabled="true"
-            >
-            </a>
-            <span className="not-available text-white"> Not available for test - Uni Project</span>
-          </h3>
-
-        </section>
-    </div>
-    </div>
+      </section>
     </div>
   );
-
 }
+
+function SkillCard({ title, img, highlight = false }: any) {
+  return (
+    <div
+      className={`
+        flex items-center gap-6
+        h-24 w-full
+        px-6
+        rounded-2xl
+        border
+        ${highlight 
+          ? "border-green-500 bg-gradient-to-r from-[#1e293b] to-[#111827]" 
+          : "border-slate-700 bg-[#1e293b]"
+        }
+        hover:scale-[1.02]
+        transition-all duration-300
+      `}
+    >
+      {/* Logo Container (tamanho fixo) */}
+      <div className="w-14 h-14 flex items-center justify-center">
+        <Image
+          src={img}
+          alt={title}
+          width={40}
+          height={40}
+          className="object-contain max-h-10"
+        />
+      </div>
+
+      {/* Title */}
+      <h4 className="text-xl font-semibold truncate">
+        {title}
+      </h4>
+    </div>
+  );
+}
+
+function ProjectCard({
+  title,
+  description,
+  image,
+  link,
+  secondaryImage,
+}: any) {
+  return (
+    <div className="bg-gradient-to-r from-[#1e293b] to-[#0f172a] 
+                    rounded-3xl 
+                    p-10 
+                    shadow-2xl
+                    flex flex-col lg:flex-row 
+                    gap-12 
+                    min-h-[420px]">
+
+      {/* LEFT SIDE */}
+      <div className="flex-1 flex flex-col justify-between">
+
+        <div>
+          <h3 className="text-3xl font-bold mb-6">
+            {title}
+          </h3>
+
+          <p className="text-gray-300 text-lg leading-relaxed line-clamp-4">
+            {description}
+          </p>
+        </div>
+
+        {/* BUTTON AREA (altura fixa) */}
+        <div className="mt-8">
+          {link ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 rounded-xl 
+                         bg-gradient-to-r from-blue-500 to-purple-600 
+                         hover:scale-105 
+                         transition-all duration-300"
+            >
+              Test Project →
+            </a>
+          ) : (
+            <span className="text-gray-400">
+              Not available for test - Uni Project
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="flex-1 flex flex-col justify-center gap-6">
+
+        {/* Main Image */}
+        <div className="h-75 w-full relative rounded-2xl overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        {/* Secondary Image (se existir) */}
+        {secondaryImage && (
+          <div className="h-75 w-full relative rounded-2xl overflow-hidden">
+            <Image
+              src={secondaryImage}
+              alt={title}
+              fill
+              className="object-cover"
+            />
+          </div>
+        )}
+
+      </div>
+    </div>
+  );
+}
+

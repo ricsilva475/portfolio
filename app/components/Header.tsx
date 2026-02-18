@@ -9,12 +9,6 @@ export default function Header() {
           Home
         </a>
         <a
-          href="/perfil"
-          className="px-4 py-2 border-2 border-white text-white  rounded-full font-medium hover:bg-white/10 transition-colors"
-        >
-          About
-        </a>
-        <a
           href="https://www.linkedin.com/in/ricardo-o-silva/"
           className="px-4 py-2 bg-transparent border-2 border-white text-white  rounded-full font-medium hover:bg-white/10 transition-colors"
         >
